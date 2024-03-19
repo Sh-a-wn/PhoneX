@@ -1,0 +1,31 @@
+import pygame
+pygame.init()
+
+Clock = pygame.time.Clock()
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+SCREEN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+ball = pygame.Rect(10, 10, 20, 20)
+
+running = True
+while running:
+    SCREEN.fill('black')
+    Clock.tick(60)
+
+    pygame.draw.rect(SCREEN, 'red', ball)
+
+    ball.move_ip(5,5)
+
+    for event in pygame.event.get():
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                running - False
+                pygame.quit()
+        if event.type == pygame.QUIT:
+            running = False 
+            pygame.quit()
+
+
+    pygame.display.update()
