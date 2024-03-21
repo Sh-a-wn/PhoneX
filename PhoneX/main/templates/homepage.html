@@ -4,154 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phonex - Buy and Sell Phones Online</title>
-    <style>
-        /* Reset CSS */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #232f3e;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        nav {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .product {
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .product img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .product h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .product p {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .product button {
-            background-color: #f0c14b;
-            border: none;
-            color: #111;
-            padding: 10px 20px;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .product button:hover {
-            background-color: #ddb347;
-        }
-
-        .login-register {
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .login-register h2 {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .login-register form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .login-register input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .login-register button {
-            background-color: #f0c14b;
-            border: none;
-            color: #111;
-            padding: 10px 20px;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .login-register button:hover {
-            background-color: #ddb347;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -160,14 +13,14 @@
 
     <nav>
         <ul>
-            <li><a href="home">Home</a></li>
-            <li><a href="brands">Phones</a></li>
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'brands' %}">Phones</a></li>
             <li><a href="#">Accessories</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="user_login">Login</a></li>
-            <li><a href="dealer_login">Register</a></li>
-            <li><a href="dealer_login">Sell Phone</a></li> <!-- Added Sell Phone option -->
+            <li><a href="{% url 'sell_phone'%}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'sell_phone' %}">Sell Phone</a></li> <!-- Added Sell Phone option -->
         </ul>
     </nav>
 
@@ -187,6 +40,7 @@ a<!DOCTYPE html>
             margin: 0;
             padding: 0;
         }
+        
 
         body {
             font-family: Arial, sans-serif;
@@ -336,17 +190,7 @@ a<!DOCTYPE html>
         <h1>Phonex - Buy Phones Online</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Phones</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-        </ul>
-    </nav>
+
 
     <div class="container">
         <div class="login-register">
