@@ -50,44 +50,5 @@
         <div class="theme-btn-container"></div>
     </section>
 
-    <script>
-        const themes = [
-            /* Array of theme objects */
-        ];
-
-        const setTheme = (theme) => {
-            /* Function to set theme */
-        };
-
-        const displayThemeButtons = () => {
-            /* Function to display theme buttons */
-        };
-
-        displayThemeButtons();
-
-        // Automatically redirect to register page after 5 seconds
-        setTimeout(() => {
-            window.location.href = 'register.html';
-        }, 5000);
-
-        // Automatically redirect to forgot password page after 10 seconds
-        setTimeout(() => {
-            window.location.href = 'forgot_password.html';
-        }, 10000);
-
-        // Register link click event
-        document.getElementById('register-link').addEventListener('click', (event) => {
-            // Redirect to register page
-            window.location.href = event.target.href;
-            event.preventDefault(); // Prevent default link behavior
-        });
-
-        // Forgot password link click event
-        document.getElementById('forgot-password-link').addEventListener('click', (event) => {
-            // Redirect to forgot password page
-            window.location.href = event.target.href;
-            event.preventDefault(); // Prevent default link behavior
-        });
-    </script>
 </body>
 </html>
