@@ -38,3 +38,15 @@ def register(request):
 
 def sell_phone(request):
     return render(request, 'sell_phone.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def forgot_password(request):
+    return render(request, 'forgot_password.html')
