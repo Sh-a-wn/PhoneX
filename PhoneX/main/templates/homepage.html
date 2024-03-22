@@ -171,13 +171,12 @@
 
     <nav>
         <ul>
-            <li><a href="https://github.com/software-development-group-13/assignment2/blob/undefined/business/business/templates/homepage.html">Home</a></li>
-            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\phones.html">Phones</a></li>
-            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\about.html">About</a></li>
-            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\contact.html">Contact</a></li>
-            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\login.html">Login</a></li>
-            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\register.html">Register</a></li>
-            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\sell phone.html">Sell Phone</a></li> <!-- Added Sell Phone option -->
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'phones' %}">Phones</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'sell_phone' %}">Sell Phone</a></li> <!-- Added Sell Phone option -->
         </ul>
     </nav>
 

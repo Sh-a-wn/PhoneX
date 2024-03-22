@@ -4,4 +4,4 @@ from .models import Brands
 class BrandsForm(ModelForm):
     class Meta:
         model = Brands
-        fields = ['name']
+        fields = '__all__'

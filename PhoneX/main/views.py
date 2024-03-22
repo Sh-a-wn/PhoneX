@@ -37,7 +37,15 @@ def register(request):
     return render(request, 'register.html')
 
 def sell_phone(request):
-    return render(request, 'sell_phone.html')
+    form = BrandsForm
+
+    if request.method == "POST":
+        form = BrandsForm(request.POST)
+        if form.is_valid():
+            form.save()
+    
+    context = {'form': form}
+    return render(request, 'sell_phone.html', context)
 
 def about(request):
     return render(request, 'about.html')
@@ -50,3 +58,6 @@ def login(request):
 
 def forgot_password(request):
     return render(request, 'forgot_password.html')
+
+def phones(request):
+    return render(request, 'phones.html')

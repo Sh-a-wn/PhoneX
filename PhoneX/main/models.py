@@ -3,6 +3,8 @@ from django.db import models
 # Create your models here.
 class Brands(models.Model):
     name = models.CharField(max_length=200)
+    price = models.IntegerField()
+    condition = models.BooleanField()
 
     def __str__(self):
         return self.name
