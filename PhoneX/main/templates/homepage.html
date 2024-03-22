@@ -3,30 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phonex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Phonex - Buy and Sell Phones Online</title>
+    <style>
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.app.goo.gl/u2Y9fAyxs19c3hwP7');
+        }
+        footer {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            background-color: #232f3e;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            background-color: #f0c14b;
+            border: none;
+            color: #111;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .product button:hover {
+            background-color: #ddb347;
+        }
+
+        .login-register {
+            
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            align-self: hover;
+            
+        }
+
+        .login-register h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .login-register form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-register input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-register button {
+            background-color: #f0c14b;
+            border: none;
+            color: #111;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .login-register button:hover {
+            background-color: #ddb347;
+        }
+
+        footer {
+            background-color: #e0d5d5;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Phonex</h1>
+        <h1>Phonex - Buy and Sell Phones Online</h1>
     </header>
+    
 
     <nav>
         <ul>
-            <li><a href="{% url 'homepage' %}">Home</a></li>
-            <li><a href="{% url 'brands' %}">Phones</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-            <li><a href="{% url 'register'%}">Login</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
-            <li><a href="{% url 'sell_phone' %}">Sell Phone</a></li> <!-- Added Sell Phone option -->
+            <li><a href="https://github.com/software-development-group-13/assignment2/blob/undefined/business/business/templates/homepage.html">Home</a></li>
+            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\phones.html">Phones</a></li>
+            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\about.html">About</a></li>
+            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\contact.html">Contact</a></li>
+            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\login.html">Login</a></li>
+            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\register.html">Register</a></li>
+            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\sell phone.html">Sell Phone</a></li> <!-- Added Sell Phone option -->
         </ul>
     </nav>
 
     <div class="container">
         <div class="login-register">
-            <!DOCTYPE html>
+            <h2>Login
+a<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,7 +197,6 @@
             margin: 0;
             padding: 0;
         }
-        
 
         body {
             font-family: Arial, sans-serif;
@@ -182,25 +339,76 @@
         footer p {
             margin: 0;
         }
+        .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
     </style>
 </head>
 <body>
-    <header>
-        <h1>Phonex - Buy Phones Online</h1>
-    </header>
+    
 
-
-
+   
     <div class="container">
         <div class="login-register">
             <h2>Login or Register</h2>
             <form id="login-form">
                 <input type="email or phone number" placeholder="Email or phone number" required>
                 <input type="password" placeholder="Password" required>
+                <input type="confirm password" placeholder="confirm password" required>
                 <button type="submit">Login</button>
             </form>
-            <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+            <p>Don't have an account? <a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\register.html">Register here</a></p>
         </div>
+        <nav>
+            <ul>
+                <label for="phones">phones:</label>
+                <select name="phones" id="phones">
+                    <option value="samsung">samsung</option>
+                    <option value="i phone">iphone</option>
+                    <option value="oppo">oppo</option>
+                    <option value="xiaomi">xiaomi</option>
+                    <option value="google pixel">google pixel</option>
+                    <option value="tecno">tecno</option>
+                    <option value="more">more</option>
+                    </select>
+                    <button value="submit"
+                <li><a href="https://unsplash.com/s/photos/samsung">samsung</a></li>
+                <li><a href="https://www.istockphoto.com/photos/apple-phone">iphone</a></li>
+                <li><a href="https://www.shutterstock.com/search/oppo">oppo</a></li>
+                <li><a href="https://www.mi.com/global/phone/">xiaomi</a></li>
+                <li><a href="https://www.pexels.com/search/google%20pixel/">google pixel</a></li>
+                <li><a href="https://www.tecno-mobile.com/phones/product-list/">tecno</a></li> <!-- Added Sell Phone option -->
+            </ul>
+        </nav>
+    
 
         <div class="product">
             <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAsgMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAABAgMEBQYHAAj/xABSEAABAwMBAwcIAgwLBwUAAAABAAIDBAURIQYSMQcTIkFRYXEUMoGRobHB0XKyFRcjNEJSVXOCkpPCJCUzRFRiY3Si4fAWJzZFg5SjJjU3Q2T/xAAaAQADAQEBAQAAAAAAAAAAAAAAAQMCBAUG/8QAIxEBAQACAgICAQUAAAAAAAAAAAECEQMhEjEEQRMUM1Fxwf/aAAwDAQACEQMRAD8AtFs5RKnRtVT01UBxdE4xSD9E5BPpCstFtpZp8CeZ1I7H84butH6Qy32rIdlHQ337HurHBgqGdNwGu8Mg4063NPtT+sjdQXCeic7LoSOlnUtIyls9NM2j2gp6ekjFLeLfTiYFzZHyNe6QdkTc9In04S1toWw0bJbnNLVVL2hznSuJ3dM6DQD2Ko7PWeiks0tcadnlL3OG+Ga4GOvsU9tzczbNk7nNE4tqDG+OE9YOg09BQSSobtbayV8NvuX3WM9NjZBJu+I1IHqUmyaoA4RTAdbDun1H5ryJR1lfaaukv1NM1lTznOtLHag7zhggcB0Tp2EL1fSVja63UlZGBvVETZGjHaMp0HxrIm6Tb0J/tBgevgq5tJez5YygoLvSQTvwGwRuD6iUk9Tc9FvfjtU9HOS0h2uNDlVuO2UcVwjqo4mieSt33ua3GekeJ9SnnlqNYxK8xRW6m36uV0j425knlkJI7850CLartQ3JhktVz5xrTg5IkaPiqbyx3h9v2ObFSuxNO9m9pru6k+3CyLYq41my21trqYZg5lTJGyZrJA5sjH7vHw3s+IWcJcpsXT1E2oqGjpRMlH40Ltf1T80ZtdT5AkeYnHQCUbmfDPFITOwQY9HDr7k3q6j+CSl34jvciZX0fip+0e0VZVXiSjor1SwRR8aWlka+fdGMukIPQ1I046qImvMdLMXOqalr93LpBM4EAdZJKhKGmhooy6nYRmJ284NwDw14d6heUK6Defa6RzGOfPuVD36AaMDdezG9nx7l1Sahemm2/bCrZGx7K1k8ThlpqGbzXeD2/wCasFJtfE8N8qpHs08+B4kb8D7F5/2Iq57Vf5bU9+/DOx7iA4EB7Wl2dO4EersWqQ0kbbO26QyAkSFssbcYAzgelLUo6rQob9a52uMNZCXNaXGJzt1+PouwVl9+2kvl0r4qO13qlfUVdQIIoKCQOjps5JMjwekWta4kA9Q01Q3ZsdRQTQS4ex2h3hnITTZCCKn2ytUULC1raapeMs3QSAwDj3E+tHiJj2nI9i79RRtltu21eyq4v56Fronn6IOntS7L3yg2bArLVQ3yAHBfRyc1LjHHdKtb5APQqfyk0V2uuzLoLDNIyrZOyUsjk3HSMAILQcjrIP6KtlwzW3TlwTx3EjQ8qtjdIIL1T1tlqDjMddA5mD44Vwtt3t10j523V9NUsxxhkDvcvMztqtt7EPJ7vHNNA3jFc6XnG48SM+orQNldm7DtbYaa9RUclmrnuc10lrmdEN5riMtByMHwz1Z0UJjvpzzC26jZtFyzQbHXlowzbm8Bo0AMbCcePWgWvx5H+LP+Gd2Y01FbfKC57aWma2KMN0klk46dmSck9SJTXSOur5CwStlLS5zZXh7jw1z1qEoat9SHRbxfCxoqGMOmmMO9m7nwSdEC7aCF0Iw1rCXgHq3Me9T10m3XZHpbFvJ4lz/eE92pt32TtU1H+E97t3P4w3cJlsZrsK48elJr6VNXqpht1orLjUAllM2R4GcbxwMD1pBgsfJpcaq+R0wcyKmlfl5DsuaM6gDt8dFsm1u0lNsXaqKBsHlExYGRQtdu4a0YLiepZDa+VG70l9bU1UjKi3mXDm7uCGdo7NNcKwcpFQ6vq46955yKIiMOPDckDXMPhkEeOnWnoL3sdtbS7T008kLXQzwECaFxyQTwPeOKnpR9ypcddSD7XLGuRpsv+093dECIPJ8P7jvDd+K2aX72o/7w33uUuRrFVdvbGb5aI4GN3pY2bzcnGRrkLNNjOTuul2rpvKywUlNIJiGuB390ggdwzx6+7s1jbq7M2f2YfcXHEpDYojjOHHJz34APpwss2D5RrnTX2KnvEgnpqpwZzhxvRk8Pks4zLx6auttD2429j2ZuLKGGmNVNuCSUA7vNg8Ne/XTuT6zX+mv1kNwoyebeHNc08WOHEFZTtvJJJdX1VY3nDKHRucdMPZkEdnAtPgcqc5HxK2wXVzg4QvqehngSG4PwHoW7jPGUt3Z1X48mH5t37qoO1UQlvtY12Obe4B7icbp3Rgq/3LSnb9B37qqu1sdNb/KayciSpqJCynYRoN1rASc6HVw0PUCum+iqH2QtrI7g6QTMnqN0xQMidkDf6JJPDgSAO/PUrVd9oKey1clA5k05ifieSN+Iw/rAbjpY7e9Ui03eeF7zCGRVUeJY3xgAEtORp3aFPrzLHKZpg3LakGaN/aHEHP1ge8JRnbQ6aoZU0tLJG8Oa9jCHDr/1hObSd3be0/3Oq98arWxpeyx0fOdpIz2ZOFPUknN7XWt3ZS1Yz6Y1vGbsiuE3lF3qaprSdUwfXgcPeoi43HDndJQk1z1PSXt4fH67e1JJFybWskG68Nc3scAQn1BJDFG2KBjI428GsGAPQs+huuo6SnbddMuA3kuT401sXHGrrzre1coYVowNQgXH+CpfhjC9nIubiDnOIki3SHNOC05J+OMdikIZjJXPxHBG3c1EMQbvHTU+tFoLeaVrwZWuDscQW49aPTwGF0jzg72APBeS8ZsGxP8AwC7H48nvQ8o0MtRs3VQRlwbneeB+E3GvuSWxcrWbBtBH8pJKG47dT7mlXCromVMZY/swEE8j1nlTWMtb4958Y3GYaMkZcRr4kreoqe30FjtEF2H8IfTCF283ea5m6Mh4625x6R3ZU9HsfSsrmVUkTZDH5gcwaekJW/bOUl6ZAKp0kRhcS3myBvA8WneHA4HBO3YMrFa6W1ieOkgjiDtXCNoa0lTs33pR/wB4b+8kRA6Jry7i858EeSUFlDFg7xmDh2EAkH3hS5PprFQeWWjmrbJCxjnbkZLXNzpnqPtWMxmsu11pKYszOJWNw1uOGB1dWi9U3G2xV0ZY8DXTVQlFslS0VaawRMdOeEnNjI9XyU8OS4zTdx32grpTWme5fY6oa11TUsBex8e8x51wT2OxnCkaOliorfJDBG2OJud1rW4A07E4r9mIKm709zc5wngGAxpw13ZkEZ07sJari5mme08d0k+K1udaCj3MZgjHa0j6qzvaqWeS9STNc4uLmVETSdMgAOAHiAtEuZ+5xDuJ+qoGvtkdYQ7zZGnea4YyD2rsrFih00slbcxUPG7hrsndxkkEdXirMySKNhpRFDIwO3w2aPe3CeO7/rilf9nJd7fNUXOznLo8e75JVtll8o3zIzB84h2o9CRSLDbj0aIEfgM9yCvmFPtJa3N0ApakD/xo1LpVQtHAOAA7Aona6o8nvFod1OZUtz6G/JW4P3Mf7jcurKPc7kN93S9qgp7lqel7VF3O4EvdqoaWseSdQvd5ufHBXP5N+lqiuQyOl7VOWy59LQ+1Zsyse3rUtb7lhw1WOP5GOd0fH8qy9tVbc+iNTw7UCpbbn0RqeHahXRrF2fq8T0OSMzutdvJGZy+ReU1XY3/gSm/Py/VetCLcrO9ij/6DpgA4nnpSdOA3XjPrIHpWjhMhQ1A4aJRFfwQEXWdfcmEo+7W36bvrtT+t6+9MX5M9vIBw2QgnsJcMe4qfJ9NYpojh3IQEAQqChObzSq7dtIpMfilWKfzCq5dj9zf9ErU9hQrocCP6PyTBrsp5eD9yjP8ArqUaxy9Bg6a7CMXacSm7XIzn6JDZWmdmshH9f4Kucp0xhqrNKNN10o+oCp6jdmvgH9p8FW+VgYNrzprP72o346sKqXWSlzzqmZKcyMc+Bs7RlvmO7nf5j4pqVTn5rnltiR2UrFIWkHKSXBT4+S45bFiWFacDpFcozKFeh+ppdtCLw0ZJ6k0dOHOcOdB7Goapx5o44YOVGxPBmwezReS23Xk/15OBjTpS/WWghZ3ydnPJs0/1pvrrRAghkhUVEcI6ZPqS6hb4S3f7C0IBs6o52J2ZmveDqGnh2JZ/3rQ/3lnvKiaJzDz342g78KVd950BPXUM+KnyNYpMIUUIVBUzr6pkcb2CQNkxpntVbuEzX05LZOcw3BcO1Pr04tklBP4WVBSuBoXYOuTkf67luErF+0pYcdp+ChmuUxtBkUkPifgoIOXcmdNcm1VWMAcxkoY8HBceodeEZjjlV2peWuIPHOqAtNtlbJcaYscHAvyD26FQnK3/AMp8Jv3FIbPOaaqg3O7Pjg5Ufyt/8p8Jv3Er6FUi3VEcEhbUsMlNIN2Vg447R3jiP80e42uWiEcwc2aknyYKlnmyY6u5w6wdQmkLHyPayNpe5zgGtaMknsAVot3NWDebcrmHCQ/d7bDAKgH6eXBgI7QSR61NlVQ0o0UUk0jY42lz3uDWtA1cTwAVsdVbDVso37fdqB2eMM7TGe8gtcW+jKRu8z7bTj7DUtJBRT5YK2mkdK6TTVhe7VhxxbhvqQESbQGEtkuFCx40cwyHLT1jghUdvAdQ9SFb8gu0g32FueKYeTiKTe38gcBjBynpOibznRTNs3J3ryexZJ057Gv9crShwWa8nP8A8dR+M31ytKCCCmdyoxVxgb24fxsZ0TxEk4ICr/Y/yN8r3PDy7RumMDvS0erKX8+z3lL3Hi5Ix/yVJ+fb7yp8jWKZHBCioVBVGXagbVdMSbmnSw3OSqtWUvksMjXEOc7UkK7VHmFVG9+a5OXsKPe/vBmet5PuUG0qbvv3hH9I/BQIK9CpUsHJhW24Tve9sm4SMgbumU7BQOKAUsEQguNFFnJDznvOCmXK1xtWnVN+4n1nObzSfT+BTTlTYZZ7NGPwjKPaxL3BfSkU85oId+nOKuQEb/XEzu7Ce3s8UwJS1WCJnZ7Ugs5Y+N0xLuBynltr30bpAQJKeUBs8DvNkb8COo8QUyXLJps223vO/Hd4Gsdq1sjOkB1A965QqBPQXbOibzlLFITLJtp5OT/u7iHXmb65WlBZxya4+1lHprmbX9MrRwggosnBGRJOCAhLieKRjOWUo7J2/FK3A6lDgeTUBA159nxU+T6axSY4Icoo4IVBUjU/yZVSvPmu8FbKjzCqlevNf4FOewo18P8AAGdu8fgoAFWPaXHkEen4XyVbC9GpUcFFedFwRHlIi9lP8dUn5w+4pztvB5RdrM3sjqCfU1NLKf47o/zh+qVPXiDyjaC1sx/Nqk+2NPH/AFnkusKy27UbmyOOOtRTmFpOVot5tHTf0fYq1VWs5OnsVOXHdS48uldQgZKlTbT2exLQWs7w09ilMFbdIfmz2LlZha+72IVTwifmXPBNpynB4JtPwXKs23k3P+7SPxm+uVpIWZcnDscnEIPHem+uVpgQQyJLwRkSXggkLceJQA5pqEf2zfiguJ4ojXfcqEdfPt+Kly/SmCYQooQqChGo81VK9ea/wKtlR5qqV681/gVrH3ApO0p/gEf0j8FWwrDtE7NDH4/EKu5XekOCiSFdqiycEArZT/HVJ+c/dKuNPHz211rZ20lT741S7N/71SfnD7ir5YgJdubUOo0dV74096Zzm8aXuto3t47vsVYrLNqej1rWqmhD8hRFTaA7OG+xUuW3NjPFlrrNr5qcU1ly4dEq+us2vmH1JzTWgAjLfYltq1SxZP6vsQrQvsU3sXLXkywE8E2mTg8E3mGQuR1Nc5PaqNmwkEZlwd+QY063nitYzwWAcm4tVbQ1lBcrhW0lRG4vjEUgDXNOmcEcQerw7Vt9lr2V9BHK17HPA3ZA05AcOPo7EEkQUSXgjZRJDogIW4cSo6nqmOnoojIS41AaGnq87sUrXsznTKqtRb6CkqDXmvq46xsnPRwukHNOIOcYx18O7KnyTbWNXkHRDlIU1RHUwMmiOY3jLSlsrnVI1HmqpXsdB+OOCrbNqFWrvDvNdponOqGZXKcTUeBIX7uuNNNWqJBU/dbbZqKOSCnnqYq5wALJ3gsIyDpw6wNewEKv6hxaWnezgjGoPYu+XcSDlEk4Jbmpc4LD6kV8Ev4hTBK3yc3cad5JGHnUeBV62NkbLtxbHCQvaKWpbrjieb+R9SoIiImjM0cjow8F4YcOIzrg9uFaoKq12S50NxsMlRUvpp+clgkIL5GYLXBnfuuccdoalRW2PYCNQkXwtKZW/aWx3KkjqqS7UT4Xjol07WnwIOoKcG7Wv8p0P/cs+aW0rBjTN7EdsDRwCSF0truFyovRUM+aOLjQH+f0nonZ809jRXm1yJ9kKD+nUv7dnzXJbHjFZ+1fswf/AKJ/2qK7ku2YOhgqP2yFcsKCxclezEMrJoY6uORhy1zagghTcGy1JQyc5R1VbCT525IAHDsIxquXJkfCiJAPldUP0x8l3kJ/plV+sPkhXIAjra146VVUn9IfJNptm6OqbuzyzuHeW/JcuWaYKTZynopHCmq6xjdMsEg3T6MJ15B/+qp/XHyXLktQ90H2OH9Lqf1h8kSSyQStPOT1B/Sb8kC5KyFumFVsRaK8Dyo1DyOB3xkeGibHk6sOQ14qXgaDel4D1LlypiKA8nez44RTj/qoPtdbPnUxT/tUK5MhXcm2zruMVR+2Qw8m2zzR0GVLdeqb/JcuQCM/JdstUOMlTSSSyO1L3vG8fE419KL9qnZD8nf4ly5IA+1Tsh+Tj+sh+1Rsh+Tv8S5cgB+1Rsh+Tf8AEuXLkB//2Q==" alt="i phone 14 pro max">
@@ -228,7 +436,12 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Phonex. All rights reserved.</p>
-    </footer>
+        
+        <p>follow us on</p>
+        <li a href ="#" ><i class="fa fa-facebook" aria hidden = "true"></i></a></li>
+        <li a href ="#" ><i class="fa fa-instagram" aria hidden = "true"></i></a></li>
+        <li a href ="#" ><i class="fa fa-twitter" aria hidden = "true"></i></a></li>
+        <li a href ="#" ><i class="fa fa-whatsapp" aria hidden = "true"></i></a></li>
+        
 </body>
 </html>
