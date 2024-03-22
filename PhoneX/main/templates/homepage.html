@@ -16,9 +16,9 @@
             <li><a href="{% url 'homepage' %}">Home</a></li>
             <li><a href="{% url 'brands' %}">Phones</a></li>
             <li><a href="#">Accessories</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="{% url 'sell_phone'%}">Login</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'register'%}">Login</a></li>
             <li><a href="{% url 'register' %}">Register</a></li>
             <li><a href="{% url 'sell_phone' %}">Sell Phone</a></li> <!-- Added Sell Phone option -->
         </ul>
@@ -200,7 +200,7 @@ a<!DOCTYPE html>
                 <input type="password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
-            <p>Don't have an account? <a href="#">Register here</a></p>
+            <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
         </div>
 
         <div class="product">
