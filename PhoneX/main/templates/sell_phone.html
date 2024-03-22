@@ -125,8 +125,8 @@ input[type="submit"]:hover {
     </header>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sell_phone.html">Sell Phone</a></li>
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'sell_phone' %}">Sell Phone</a></li>
         </ul>
     </nav>
     <div class="container sell-phone-container">
@@ -137,7 +137,6 @@ input[type="submit"]:hover {
 
             <label for="condition">Condition:</label>
             <select id="condition" name="condition" required>
-                <option value="">Select Condition</option>
                 <option value="new">New</option>
                 <option value="used">Used</option>
             </select>

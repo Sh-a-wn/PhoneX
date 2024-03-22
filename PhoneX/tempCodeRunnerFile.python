@@ -1,31 +1,68 @@
 import pygame
+import random
 pygame.init()
 
 Clock = pygame.time.Clock()
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 500
+SCREEN_HEIGHT = 500
+x_vel = 6
+y_vel = 0
+
+colours = ['red', 'yellow', 'blue', 'cyan', 'orange', 'purple', 'green', 'lime']
+colour_choice = random.choice(colours)
 
 SCREEN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-ball = pygame.Rect(10, 10, 20, 20)
+left = pygame.Rect(0,0,20,SCREEN_HEIGHT)
+right = pygame.Rect(SCREEN_WIDTH - 20, 0, 20, SCREEN_HEIGHT)
+top = pygame.Rect(0, 0, SCREEN_WIDTH, 20)
+bottom = pygame.Rect(0,SCREEN_HEIGHT - 20,SCREEN_WIDTH,20)
+
+ball = pygame.Rect(SCREEN_WIDTH /2 -20, SCREEN_HEIGHT / 2 -20, 20, 20)
 
 running = True
 while running:
-    SCREEN.fill('black')
+    SCREEN.fill((0,0,0))
     Clock.tick(60)
 
-    pygame.draw.rect(SCREEN, 'red', ball)
+    pygame.draw.rect(SCREEN, colour_choice, left)
+    pygame.draw.rect(SCREEN, colour_choice, right)
+    pygame.draw.rect(SCREEN, colour_choice, top)
+    pygame.draw.rect(SCREEN, colour_choice, bottom)
 
-    ball.move_ip(5,5)
+    pygame.draw.rect(SCREEN, colour_choice, ball)
+
+    ball.move_ip(x_vel, y_vel)
+
+    collide_right = pygame.Rect.colliderect(ball, right)
+    collide_left = pygame.Rect.colliderect(ball, left)
+    collide_top = pygame.Rect.colliderect(ball, top)
+    collide_bottom = pygame.Rect.colliderect(ball, bottom)
+
+    if collide_right:
+        colour_choice = random.choice(colours)
+        x_vel *= -1
+        y_vel = 0
+    if collide_left:
+        colour_choice = random.choice(colours)
+        x_vel *= -1
+        y_vel *= -1
+    if collide_top:
+        x_vel *= -1
+        y_vel *= 4
+    if collide_bottom:
+        x_vel *= -1
+        y_vel *= -4
+
+
 
     for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+            pygame.quit()
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
-                running - False
+                running = False
                 pygame.quit()
-        if event.type == pygame.QUIT:
-            running = False 
-            pygame.quit()
-
 
     pygame.display.update()
