@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<html>
+
+<h1>Available Brands</h1>
+
+
+{% for brand in brands %}
+
+    <p><a href="">{{brand.name}}</p></a>
+
+{%endfor%}
+
+{% for item in make %}
+    {{make.text}}
+{%endfor%}
+
+<ul>
+    <p>Huawei</p>
+    <p>Techno</p>
+    <p>Infinix</p>
+</ul>
+</html>
+{% endblock content %}
