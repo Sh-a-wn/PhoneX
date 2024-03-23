@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phone Store</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to our Phone Store</h1>
+    <div class="phone-list">
+        <div class="phone">
+            <img src="phone1.jpg" alt="Phone 1">
+            <h2>Phone 1</h2>
+            <p>$500</p>
+            <button onclick="addToCart('Phone 1', 500)">Add to Cart</button>
+        </div>
+        <div class="phone">
+            <img src="phone2.jpg" alt="Phone 2">
+            <h2>Phone 2</h2>
+            <p>$600</p>
+            <button onclick="addToCart('Phone 2', 600)">Add to Cart</button>
+        </div>
+    </div>
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0</span></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
