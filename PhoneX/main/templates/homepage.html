@@ -172,11 +172,12 @@
     <nav>
         <ul>
             <li><a href="{% url 'homepage' %}">Home</a></li>
-            <li><a href="{% url 'phones' %}">Phones</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
-            <li><a href="{% url 'sell_phone' %}">Sell Phone</a></li> <!-- Added Sell Phone option -->
+            <li><a href="lates\phones.html">Phones</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="business\business\templates\contact.html">Contact</a></li>
+            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\login.html">Login</a></li>
+            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\register.html">Register</a></li>
+            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\sell phone.html">Sell Phone</a></li> <!-- Added Sell Phone option -->
         </ul>
     </nav>
 
@@ -270,6 +271,7 @@ a<!DOCTYPE html>
             color: #666;
             font-size: 14px;
             margin-bottom: 10px;
+            image-orientation: from-image;
         }
 
         .product button {
@@ -369,6 +371,26 @@ a<!DOCTYPE html>
   background: #125688;
   color: white;
 }
+.horizontal-images {
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap to the next line if necessary */
+}
+.horizontal-images {
+    background-color: #333;
+}
+
+.horizontal-images img {
+  margin-right: 10px; /* Adjust margin as needed for spacing */
+}
+
+@media screen and (max-width: 500px) {
+  .horizontal-images img {
+    width: 50%; /* Make images take up full width on smaller screens */
+    margin-right: 0; /* Remove margin to prevent excess spacing */
+  }
+}
+
+
     </style>
 </head>
 <body>
@@ -407,6 +429,16 @@ a<!DOCTYPE html>
                 <li><a href="https://www.tecno-mobile.com/phones/product-list/">tecno</a></li> <!-- Added Sell Phone option -->
             </ul>
         </nav>
+        <div class="class horizontal-images">
+            
+              <img src="https://media.wired.com/photos/6202b99c2c286ef2d70b5b0a/1:1/w_1281,h_1281,c_limit/Gear-Samsung-Galaxy-S22-Ultra.jpg" alt="samsung" style="width: 30%;">
+            
+              <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQJlh_Wzrr2Ie5o0Kbckkx7KuV9r6aKHIuzGniANLakQ3nufLFsllSVnary--xIAeIQ_ZwUXsJGlU_y0Q3tb02C4NBafniq7z5DmwCaL14ds0VnJM0A6qb3Ui5fh0Nxf-MbmX3sQQ&usqp=CAc alt="xiaomi style="width: 30%;">
+
+              <img src="https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x7-ultra.jpg" alt="Mountains" style="width: 30%;">
+            </div>
+          </div>
+          
     
 
         <div class="product">
@@ -435,12 +467,12 @@ a<!DOCTYPE html>
     </div>
 
     <footer>
-        
-        <p>follow us on</p>
-        <li a href ="#" ><i class="fa fa-facebook" aria hidden = "true"></i></a></li>
-        <li a href ="#" ><i class="fa fa-instagram" aria hidden = "true"></i></a></li>
-        <li a href ="#" ><i class="fa fa-twitter" aria hidden = "true"></i></a></li>
-        <li a href ="#" ><i class="fa fa-whatsapp" aria hidden = "true"></i></a></li>
-        
+        <ul>
+            <p>follow us on</p>
+        <li a href ="#" ><i class="fa fa-facebook" aria hidden = "false"></i></a></li>
+        <li a href ="#" ><i class="fa fa-instagram" aria hidden = "false"></i></a></li>
+        <li a href ="#" ><i class="fa fa-twitter" aria hidden = "false"></i></a></li>
+        <li a href ="#" ><i class="fa fa-whatsapp" aria hidden = "false"></i></a></li>
+        </ul>
 </body>
 </html>
