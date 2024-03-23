@@ -8,18 +8,31 @@
 
 {% for brand in brands %}
 
-    <p><a href="">{{brand.name}}</p></a>
+
+    <p><a href=""><h2>{{brand.name}}</h2></p></a>
+    <ul>
+    <p>UGX {{brand.price}}</p>
+
+    {% if brand.condition == True %}
+        <p>Condition: New</p>
+    {% else %}
+        <p>Condition: Used</p>
+    {% endif %}
+
+    <p>{{brand.description}}</p>
+    </ul>
 
 {%endfor%}
+
+
 
 {% for item in make %}
-    {{make.text}}
+    <p>{{make.text}}</p>
 {%endfor%}
 
+
+
 <ul>
-    <p>Huawei</p>
-    <p>Techno</p>
-    <p>Infinix</p>
 </ul>
 </html>
 {% endblock content %}

@@ -2,9 +2,10 @@ from django.db import models
 
 # Create your models here.
 class Brands(models.Model):
-    name = models.CharField(max_length=200)
-    price = models.IntegerField()
-    condition = models.BooleanField()
+    name = models.CharField(max_length=200, blank=False)
+    price = models.IntegerField(default=0, blank=False)
+    condition = models.BooleanField(default=True, blank=False) # True: New , False: Used
+    description = models.CharField(max_length=200, blank=True)
 
     def __str__(self):
         return self.name
