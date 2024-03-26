@@ -1,10 +1,11 @@
+<!-- homepage.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Phonex - Buy and Sell Phones Online</title>
+    <title>{% block title %}Phonex - Buy and Sell Phones Online{% endblock %}</title>
     <style>
         /* Reset CSS */
         * {
@@ -171,13 +172,13 @@
 
     <nav>
         <ul>
-            <li><a href="{% url 'homepage' %}">Home</a></li>
-            <li><a href="lates\phones.html">Phones</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="business\business\templates\contact.html">Contact</a></li>
-            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\login.html">Login</a></li>
-            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\register.html">Register</a></li>
-            <li><a href="C:\Users\ORISA IVAN\Desktop\myapp\business\business\templates\sell phone.html">Sell Phone</a></li> <!-- Added Sell Phone option -->
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'phones' %}">Phones</a></li>
+            <li><a href="{% url 'About' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'sellphone' %}">Sell Phone</a></li> <!-- Added Sell Phone option -->
         </ul>
     </nav>
 
