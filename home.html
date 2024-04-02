@@ -1,0 +1,19 @@
+<!-- home.html -->
+
+{% extends 'homepage.html' %}
+
+{% block title %}
+    Home - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+
+<h1>Welcome to the PhoneX homepage</h1>
+
+<body>
+    <p>We trade phones of all brands online</p>
+
+    <p>Click <a href="/brands">here</a> to see the available brands</p> 
+</body>
+
+{% endblock content %}
