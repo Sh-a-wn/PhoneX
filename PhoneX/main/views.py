@@ -5,6 +5,7 @@ from .forms import BrandsForm, CreateNewUser
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def homepage(request):
@@ -47,20 +48,23 @@ def addBrand(request):
     return render(request, 'add_Brand.html', context)
 
 def register(request):
-    form = CreateNewUser()
+    if request.user.is_authenticated:
+        return redirect('homepage')
+    
+    else:
+        form = CreateNewUser()
+        if request.method == 'POST':
+            form = CreateNewUser(request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Account was created successfully')
 
-    if request.method == 'POST':
-        form = CreateNewUser(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Account was created successfully')
+                return redirect('login')
 
-            return redirect('login')
+        context = {'form' : form}
+        return render(request, 'register.html', context)
 
-    context = {'form' : form}
-    return render(request, 'register.html', context)
-
-
+@login_required(login_url='login')
 def sell_phone(request):
     form = BrandsForm
 
@@ -79,21 +83,24 @@ def contact(request):
     return render(request, 'contact.html')
 
 def loginPage(request):
+    if request.user.is_authenticated:
+        return redirect('homepage')
+    
+    else:
+        if request.method == "POST":
+            username = request.POST.get('username')
+            password = request.POST.get('password')
 
-    if request.method == "POST":
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+            user = authenticate(request, username=username, password=password)
 
-        user = authenticate(request, username=username, password=password)
+            if user != None:
+                login(request, user)
+                return redirect('homepage')
+            else:
+                messages.info(request, 'Invalid username or password')
 
-        if user != None:
-            login(request, user)
-            return redirect('homepage')
-        else:
-            messages.info(request, 'Invalid username or password')
-
-    context = {}
-    return render(request, 'login.html', context)
+        context = {}
+        return render(request, 'login.html', context)
 
 def logoutUser(request):
     logout(request)
