@@ -55,7 +55,7 @@ def register(request):
             form.save()
             messages.success(request, 'Account was created successfully')
 
-            # return redirect('homepage')
+            return redirect('login')
 
     context = {'form' : form}
     return render(request, 'register.html', context)
@@ -79,7 +79,21 @@ def contact(request):
     return render(request, 'contact.html')
 
 def loginPage(request):
-    return render(request, 'login.html')
+
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user != None:
+            login(request, user)
+            return redirect('homepage')
+        else:
+            messages.info(request, 'Invalid username or password')
+
+    context = {}
+    return render(request, 'login.html', context)
 
 def forgot_password(request):
     return render(request, 'forgot_password.html')
