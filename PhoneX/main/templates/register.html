@@ -201,24 +201,29 @@
             <div class="form-container">
                 <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
                 <h1 class="opacity">REGISTER</h1>
-                <form>
-                    <input type="text" placeholder="USERNAME" />
-                    <input type="password" placeholder="PASSWORD" />
-                    <input type="CONFIRM PASSWORD" placeholder="RE-ENTER PASSWORD">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    {{form.username.label}}
+                    {{form.username}}
+                    {{form.email.label}}
+                    {{form.email}}
+                    {{form.password1.label}}
+                    {{form.password1}}
+                    {{form.password2.label}}
+                    {{form.password2}}
                     <button class="opacity">SUBMIT</button>
                 </form>
-                <div class="register-forget opacity">
-                    <a href="{% url 'register' %}">REGISTER</a>
-                    <a href="{% url 'login' %}">LOGIN</a>
-                </div>
+                {{ form.errors }}
+
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
             </div>
             <div class="circle circle-two"></div>
         </div>
         <div class="theme-btn-container"></div>
     </section>
 
-<<<<<<< HEAD:PhoneX/main/templates/register.html
-=======
     <script>
         const themes = [
             {
@@ -280,6 +285,5 @@
             alert("Redirecting to registration page...");
         });
     </script>
->>>>>>> 019d9709fe8bb321d25ef3eead77e5a9d8e57608:register.html
 </body>
 </html>

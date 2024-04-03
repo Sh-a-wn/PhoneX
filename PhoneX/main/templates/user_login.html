@@ -6,7 +6,8 @@
 
 <body>
     <p>Users are able to buy models of phones of any brands</p>
-    <form action="">
+    <form method="POST" action="">
+        {% csrf_token %}
         <label>User Name</label>
         <input type="text" name="username", placeholder="User Name">
         <div>

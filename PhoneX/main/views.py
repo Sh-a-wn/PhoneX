@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Brands, Make
-from .forms import BrandsForm, RegistrationForm
+from .forms import BrandsForm, CreateNewUser
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 
 # Create your views here.
 def homepage(request):
@@ -20,7 +23,17 @@ def dealer_login(request):
     return render(request, 'dealer_login.html')
 
 def user_login(request):
-    return render(request, 'user_login.html')
+    form = CreateNewUser()
+
+    if request.method == 'POST':
+        form = CreateNewUser(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/homepage')
+
+
+    context = {'form' : form}
+    return render(request, 'registerpage.html', context)
 
 def addBrand(request):
     form = BrandsForm
@@ -34,14 +47,18 @@ def addBrand(request):
     return render(request, 'add_Brand.html', context)
 
 def register(request):
+    form = CreateNewUser()
+
     if request.method == 'POST':
-        form = RegistrationForm(request.POST)
+        form = CreateNewUser(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('login')
-    else:
-        form = RegistrationForm()
-    return render(request, 'register.html', {'form': form})
+            messages.success(request, 'Account was created successfully')
+
+            # return redirect('homepage')
+
+    context = {'form' : form}
+    return render(request, 'register.html', context)
 
 
 def sell_phone(request):
@@ -61,7 +78,7 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
 
-def login(request):
+def loginPage(request):
     return render(request, 'login.html')
 
 def forgot_password(request):
