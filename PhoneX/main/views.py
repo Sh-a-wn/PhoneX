@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Brands, Make
-from .forms import BrandsForm
+from .forms import BrandsForm, RegistrationForm
 
 # Create your views here.
 def homepage(request):
@@ -34,7 +34,15 @@ def addBrand(request):
     return render(request, 'add_Brand.html', context)
 
 def register(request):
-    return render(request, 'register.html')
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = RegistrationForm()
+    return render(request, 'register.html', {'form': form})
+
 
 def sell_phone(request):
     form = BrandsForm
